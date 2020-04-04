@@ -105,8 +105,8 @@ def time_stats(df):
 
     # display the most common start hour
     df['hour'] = df['Start Time'].dt.hour
-    most_hour = df['hour'].mode()[0]
-    print('Most common start hour: ', most_hour)
+    most_common_start_hour = df['hour'].mode()[0]
+    print('Most common start hour: ', most_common_start_hour)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -200,7 +200,7 @@ def main():
             raw = input('\nWould you like to see 5 lines of raw data? Enter yes or no.\n')
             if raw.lower() == 'yes':
                 print(df.iloc[n], '\n\n', df.iloc[n+1], '\n\n', df.iloc[n+2], '\n\n', df.iloc[n+3], '\n\n', df.iloc[n+4], '\n')
-                n = n + 5
+                n += 5
                 continue
             else:
                 break
