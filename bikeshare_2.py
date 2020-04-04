@@ -200,7 +200,7 @@ def main():
             raw = input('\nWould you like to see 5 lines of raw data? Enter yes or no.\n')
             if raw.lower() == 'yes':
                 print(df.iloc[n], '\n\n', df.iloc[n+1], '\n\n', df.iloc[n+2], '\n\n', df.iloc[n+3], '\n\n', df.iloc[n+4], '\n')
-                n = n + 5
+                n += 5
                 continue
             else:
                 break
